@@ -1,0 +1,16 @@
+name: String replace test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: String replace test
+        run: |
+          file="#555_STR1"
+          BRANCH_NAME="#STR2_#666"
+
+          urlPart="${BRANCH_NAME//#/%23}/${file//#/%23}"
+          echo "${urlPart}"
