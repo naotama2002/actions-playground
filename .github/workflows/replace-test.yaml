@@ -2,6 +2,9 @@ name: String replace test
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types:
+      - run-build
 
 jobs:
   run-build:
